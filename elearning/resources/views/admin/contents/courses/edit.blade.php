@@ -3,21 +3,24 @@
 @section('content')
 
 <div class="pagetitle">
-    <h1>Form</h1>
+    <h1>Edit Courses</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="admin/dashboard">Home</a></li>
         <li class="breadcrumb-item">Pages</li>
-        <li class="breadcrumb-item active">Dashboard</li>
+        <li class="breadcrumb-item active">Edit Courses</li>
       </ol>
     </nav>
   </div><!-- End Page Title -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <form method="post" action="\admin\courses\index">
+  
+  <form action="/admin/courses/update/{{ $courses->id }}" method="post" class="mt-3">
+    @csrf
+    @method('PUT')
     <div class="form-group row">
-      <label for="name" class="col-4 col-form-label">Name</label> 
+      <label for="name" class="col-2 col-form-label">Name</label> 
       <div class="col-8">
         <div class="input-group">
           <div class="input-group-prepend">
@@ -25,12 +28,12 @@
               <i class="fa fa-archive"></i>
             </div>
           </div> 
-          <input id="name" name="name" type="text" class="form-control">
+          <input id="name" name="name" type="text" class="form-control" value="{{ $courses->name ?? '' }}">
         </div>
       </div>
     </div>
     <div class="form-group row">
-      <label for="category" class="col-4 col-form-label">Category</label> 
+      <label for="category" class="col-2 col-form-label">Category</label> 
       <div class="col-8">
         <div class="input-group">
           <div class="input-group-prepend">
@@ -38,18 +41,18 @@
               <i class="fa fa-bar-chart"></i>
             </div>
           </div> 
-          <input id="category" name="category" type="text" class="form-control">
+          <input id="category" name="category" type="text" class="form-control" value="{{ $courses->category ?? '' }}">
         </div>
       </div>
     </div>
     <div class="form-group row">
-      <label for="desc" class="col-4 col-form-label">Description</label> 
+      <label for="desc" class="col-2 col-form-label">Description</label> 
       <div class="col-8">
-        <textarea id="desc" name="desc" cols="40" rows="5" class="form-control"></textarea>
+        <textarea id="desc" name="desc" cols="40" rows="5" class="form-control" required>{{ $courses->desc }}</textarea>
       </div>
     </div> 
     <div class="form-group row">
-      <div class="offset-4 col-8">
+      <div class="offset-2 col-2">
         <button name="submit" type="submit" class="btn btn-primary">Submit</button>
       </div>
     </div>

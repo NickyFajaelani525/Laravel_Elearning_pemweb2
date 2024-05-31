@@ -31,9 +31,9 @@
 
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Hamba</h5>
-            <p><i> "You know what? Carrying four fools to victory isn't easy."
-              <br>"Kau tahu? Membawa empat orang bodoh menuju kemenangan tidaklah mudah."</i></p>
+            <h5 class="card-title">Brody</h5>
+            <p><i> "Pain, is proof that I am still alive"
+              <br>"Rasa Sakit ini adalah bukti bahwa aku masih hidup"</i></p>
           </div>
         </div>
 
@@ -43,9 +43,9 @@
 
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Popol & Kupa</h5>
-            <p><i> "You know what? Carrying four fools to victory isn't easy."
-              <br>"Kau tahu? Membawa empat orang bodoh menuju kemenangan tidaklah mudah."</i></p>
+            <h5 class="card-title">Gatot Kaca</h5>
+            <p><i> "We are unity in diversity"
+              <br>"Kami adalah kesatuan dalam keanekaragaman"</i></p>
           </div>
         </div>
 

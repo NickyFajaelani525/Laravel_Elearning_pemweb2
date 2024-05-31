@@ -61,7 +61,19 @@ Route::delete('admin/student/delete/{id}', [StudentController::class, 'destroy']
 Route::get('admin/courses',[CoursesController::class, 'index']);
 
 //Route untuk Menampilkan form courses
-Route::get('admin/courses/form',[CoursesController::class, 'form']);
+Route::get('admin/courses/create',[CoursesController::class, 'create']);
+
+//Route untuk mengirim data from
+Route::post('admin/courses/create',[CoursesController::class, 'store']);
+
+//Route untuk menampilkan edit
+Route::get('admin/courses/edit/{id}',[CoursesController::class, 'edit']);
+
+//Route untuk menyimpan hasil edit / update
+Route::put('admin/courses/update/{id}',[CoursesController::class, 'update']);
+
+//Route untuk menghapus data courses
+Route::delete('admin/courses/delete/{id}',[CoursesController::class, 'destroy']);
 
 
 
