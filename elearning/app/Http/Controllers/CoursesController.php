@@ -18,4 +18,15 @@ class CoursesController extends Controller
         ]);
 
     }
+
+    public function form(){
+        //mendapatkan data courses dari database
+        $courses = Courses::all();
+
+        //panggil view dan kirim ke data view
+        return view('admin.contents.courses.form', [
+            'courses' => $courses
+        ]);
+
+    }
 }

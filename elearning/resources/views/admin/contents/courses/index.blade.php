@@ -16,7 +16,7 @@
   <section class="section">
     <div class="card">
       <div class="card-body py-4">
-        <a href="\course/create" class="btn btn-primary m-3">+Courses</a>
+        <a href="\admin\courses\form" class="btn btn-primary m-3">+Courses</a>
         <div class="table-responsive">
           <table class="table">
             <tr>

@@ -31,6 +31,30 @@
 
         <div class="card">
           <div class="card-body">
+            <h5 class="card-title">Hamba</h5>
+            <p><i> "You know what? Carrying four fools to victory isn't easy."
+              <br>"Kau tahu? Membawa empat orang bodoh menuju kemenangan tidaklah mudah."</i></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-6">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Popol & Kupa</h5>
+            <p><i> "You know what? Carrying four fools to victory isn't easy."
+              <br>"Kau tahu? Membawa empat orang bodoh menuju kemenangan tidaklah mudah."</i></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-6">
+
+        <div class="card">
+          <div class="card-body">
             <h5 class="card-title">Nathan</h5>
             <p><i>“It is in despair that I see the fondest hopes,”<br>“Dalam sebuah keputusasaan, aku melihat harapan yang indah.”</i></p>
           </div>
