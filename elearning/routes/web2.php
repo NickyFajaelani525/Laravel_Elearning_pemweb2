@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
-
-
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\StudentController;
+use Illuminate\Support\Facades\Route;
 
+//Route
+Route::get('/', function () {
+    return view('welcome');
+});
 
 /*
 *method HTTP:
@@ -17,23 +18,13 @@ use App\Http\Controllers\StudentController;
 *4. Delete : digunakan unuk menghapus data.
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    //==================================================================================================DASHBOARD
+//==================================================================================================DASHBOARD
 
 //Dashboard Route
-Route::get('admin/dashboard',[DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
+Route::get('admin/dashboard',[DashboardController::class, 'index']);
 
 
 
@@ -83,6 +74,5 @@ Route::put('admin/courses/update/{id}',[CoursesController::class, 'update']);
 //Route untuk menghapus data courses
 Route::delete('admin/courses/delete/{id}',[CoursesController::class, 'destroy']);
 
-});
 
-require __DIR__.'/auth.php';
+

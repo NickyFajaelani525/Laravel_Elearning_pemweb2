@@ -169,12 +169,12 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="{{ asset('NiceAdmin') }}/assets/img/cv.jpeg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">Nicky Fajaelan</span>
+            <span class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->name }}</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Nicky Fajaelani</h6>
+              <h6>{{ Auth::user()->email }}</h6>
               <span>Game Developer</span>
             </li>
             <li>
@@ -182,7 +182,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="{{ route('profile.edit') }}">
                 <i class="bi bi-person"></i>
                 <span>My Profile</span>
               </a>
@@ -212,10 +212,13 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <form action="{{ route('logout') }}" method="POST">
+              @csrf
+              <button class="dropdown-item d-flex align-items-center">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
-              </a>
+              </button>
+            </form>
             </li>
 
           </ul><!-- End Profile Dropdown Items -->
